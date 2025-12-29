@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-COPY dist/landing_page /usr/share/nginx/html
+COPY dist/landing_page/browser /usr/share/nginx/html
 
 EXPOSE 80
 
