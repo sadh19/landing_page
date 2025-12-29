@@ -1,10 +1,6 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:22'
-        }
-    }
-    
+    agent any    
+
     environment {
         APP_NAME = "mi-app"
         IMAGE = "mi-app:latest"
