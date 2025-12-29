@@ -7,11 +7,6 @@ pipeline {
     }
     
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/sadh19/landing_page.git' 
-            }
-        }
         stage('Install') {
             steps {
                 sh 'npm ci'
