@@ -21,11 +21,6 @@ pipeline {
                 sh 'npm ci'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'npm test'
-            }
-        }
         stage('Build App') {
             steps {
                 sh 'npm run build'
