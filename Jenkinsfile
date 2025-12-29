@@ -17,6 +17,15 @@ pipeline {
                 sh 'npm run build'
             }
         }
+        stage('Debug dist') {
+            steps {
+                sh '''
+                    ls -la
+                    ls -la dist || true
+                    ls -la dist/landing_page || true
+                '''
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t $IMAGE .'
